@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>安踏品牌官方网站:ANTA brandsite</title>
+		<link rel="shortcut icon" href="img1/logo.ico" /> 
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<style type="text/css">
+
+	</style>
+
+	<body>
+		<!-- 头部 -->
+		<div class="header">
+			<div class="header-cen">
+				<span>语言：<a href="" class="header-a-last">En</a> <a href="" class="header-a-fist">中</a> </span>
+				<span>欢迎来到安踏！</span>
+			</div>
+		</div>
+		<!-- 轮播图 -->
+		<div class="banner">
+			<div class="banner-tu">
+				<ul class="banner-ul">
+					<li class="ban-ul-oli"><a href=""><img src="img1/000.jpg"></a></li>
+					<li class="ban-ul-tli"><a href=""><img src="img1/001.jpg"></a></li>
+					<li class="ban-ul-sli"><a href=""><img src="img1/002.jpg"></a></li>
+				</ul>
+			</div>
+			<div class="banner-list">
+				<ul>
+					<li class="list-li"></li>
+					<li class="list-li"></li>
+					<li class="list-li"></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 内容 -->
+		<div class="contion">
+			<div class="contion-cen">
+				<div class="cen-lf">
+					<a class="cen-img" href="market.html" target="_blank"><img src="img1/20190610011512428.jpg"></a>
+					<span>在线商城</span>
+					<a class="cen-more" href=""><i></i>热销商品</a>
+				</div>
+				<div class="cen-ri">
+					<a class="cen-img" href=""><img src="img1/20190604113007231.jpg"></a>
+					<span>安踏新闻</span>
+					<a class="cen-more" href=""><i></i>最新事件</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 底部 -->
+		<div class="footer">
+			<div class="footer-cen">
+				<div class="footer-cen-top">
+					<div class="cen-top-top">
+						<h3>关注我们:</h3>
+						<a href=""><img src="img1/20150625094910461.png"></a>
+						<a href=""><img src="img1/20150625095948200.png"></a>
+					</div>
+					<div class="cen-top-bot">
+						<a href="">更多</a>
+					</div>
+				</div>
+				<div class="footer-cen-bot">
+					<span class="cen-bot-span-top">
+						<a href="">人才招聘</a>
+						|
+						<a href="">关于我们</a>
+						|
+						<a href="">隐私政策</a>
+						|
+						<a href="">安踏儿童</a>
+						|
+						<a href="">安踏海外</a>
+						|
+						<a href="">安踏投资者关系</a>
+					</span>
+					<span>Copyright(C) 2015 by www.ANTA.com <a href=""><img src="img1/copy.png" />闽ICP备11020421号</a>
+						©安踏体育用品有限公司版权所有</span>
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+</html>
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function() {
+		//轮播图
+		let x = $('.banner-ul').css('left');
+		// let x = $('.banner-ul').css('left');
+		$('.list-li').eq(0).css('background', 'red');
+		
+		// $('')
+		let y = window.innerWidth-17;
+		let z = 2*y;
+		let a = -y+'px';
+		let b = -z+'px';
+		// console.log(b);
+		
+		// 点击豆豆
+		$('.list-li').click(function() {
+			change($(this).index());
+			switch ($(this).index()) {
+				case 0:
+					x = move(0, 1000);
+					break;
+				case 1:
+					x = move(-y, 1000);
+					break;
+				case 2:
+					x = move(-z, 1000);
+					break;
+			}
+		})
+		// 自动播放
+		setInterval(function() {
+			if (x == "0px") {
+				x = move(-y, 1000);
+				change(1);
+			}
+			if (x == a) {
+				x = move(-z, 1000);
+				change(2);
+			}
+			if (x == b) {
+				x = move(0, 500);
+				change(0);
+			}
+			x = $('.banner-ul').css('left');
+			return x;
+		}, 3000);
+
+		function move(left, time) {
+			$('.banner-ul').animate({
+				left: left
+			}, time);
+		}
+
+		function change(i) {
+			$('.list-li').eq(i).css('background', 'red').siblings("li").css('background', 'gray');
+		}
+	});
+</script>

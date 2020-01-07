@@ -1,0 +1,598 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+dl,
+dd,
+hr,
+ul,
+ol,
+td,
+input,
+option,
+textarea {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: normal 12px "微软雅黑", Arial, sans-serif;
+	font-size: 12px;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+}
+
+.header {
+	width: 100%;
+	height: 42px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+header {
+	width: 1190px;
+	height: 42px;
+	line-height: 42px;
+	margin: 0 auto;
+}
+
+header a img {
+	width: 181px;
+	height: 42px;
+	float: left;
+}
+
+header p {
+	margin-left: 20px;
+	float: left;
+}
+
+header a {
+	color: #000000;
+}
+
+header ul {
+	float: right;
+	margin-right: 10px;
+}
+
+header li {
+	float: left;
+}
+
+.phone {
+	display: inline-block;
+	width: 12px;
+	height: 15px;
+	margin-right: 5px;
+	margin-bottom: -2px;
+	background: url(../img2/phone.gif);
+}
+
+.phone-li {
+	position: relative;
+}
+
+.phone-box {
+	position: absolute;
+	top: 85px;
+	left: -95px;
+	z-index: 199;
+	width: 280px;
+	height: 150px;
+	border: 1px #ddd solid;
+	background: #fff;
+	display: none;
+}
+
+.phone-box img {
+	margin: 13px 30px 13px;
+}
+
+.shopcar {
+	display: inline-block;
+	width: 12px;
+	height: 15px;
+	margin-right: 5px;
+	margin-bottom: -2px;
+	background: url(../img2/index-icon.png) -45px -96px no-repeat;
+}
+
+/* 头部划过 */
+header p a:hover {
+	color: #D6211A;
+}
+
+header ul li a:hover {
+	color: #D6211A;
+}
+
+header ul li:hover .phone-box {
+	display: block;
+}
+
+/* 导航 */
+.nav {
+	width: 100%;
+	height: 36px;
+	background: #231F20;
+}
+
+.nav-s {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+}
+
+nav {
+	width: 1190px;
+	height: 36px;
+	margin: 0 auto;
+}
+
+#n-lf {
+	background: #D6211A url(../img2/public.3.4.gif) 0 -82px no-repeat;
+	height: 36px;
+	float: left;
+	position: relative;
+}
+
+#n-lf .lf-a {
+	display: block;
+	text-indent: 24px;
+	line-height: 36px;
+	font-size: 16px;
+	width: 210px;
+	cursor: pointer;
+}
+
+#n-lf a {
+	color: #FFFFFF;
+}
+
+#n-lf .list-le {
+	z-index: 100;
+	position: absolute;
+	left: 0;
+	top: 36px;
+	background: url(../img2/style-tab-bg.png) no-repeat;
+	display: none;
+}
+
+#n-lf .list-le li {
+	position: relative;
+	padding: 7px 15px 8px;
+	width: 180px;
+	line-height: 22px;
+}
+
+#n-lf .list-le li h3 {
+	line-height: 18px;
+	font-size: 16px;
+	height: 21px;
+	font-weight: normal;
+	display: block;
+}
+
+#n-lf .list-le li p {
+	display: block;
+	font-size: 12px;
+}
+
+#n-lf .list-le .list-box {
+	background: rgba(255, 255, 255, 0.9);
+	z-index: 99;
+	position: absolute;
+	left: 210px;
+	top: -80px;
+	width: 735px;
+	height: 220px;
+	border: 1px solid #ddd;
+	display: none;
+}
+
+#n-lf .list-le .list-box ul {
+	width: 430px;
+	border-top: 1px #ddd dashed;
+	border-bottom: 1px #ddd dashed;
+	margin: 30px 20px 30px 30px;
+	height: 158px;
+	position: absolute;
+}
+
+#n-lf .list-le .list-box ul li {
+	width: 100%;
+	margin: 23px 0 0px;
+	padding: 0;
+}
+
+#n-lf .list-le .list-box ul li a {
+	color: #999;
+	margin-right: 10px;
+}
+
+#n-lf .list-le .list-box ul li a img {
+	width: 100%;
+	height: auto;
+}
+
+#n-lf .list-le .list-box .list-box-ri {
+	border-left: 1px #ddd solid;
+	height: 178px;
+	margin: 20px 0;
+	padding: 0 20px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#n-lf .list-le .list-box .list-box-ri h4 {
+	font-weight: bold;
+	color: #666;
+	line-height: 18px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	display: block;
+}
+
+#n-lf .list-le .list-box .list-box-ri a {
+	cursor: pointer;
+	display: block;
+}
+
+/* 划过 */
+#n-lf:hover .list-le {
+	display: block;
+}
+
+#n-lf .list-le li:hover {
+	background: #D6211A;
+}
+
+#n-lf .list-le li:hover .list-box {
+	display: block;
+}
+
+#n-lf .list-le li:hover .list-box li {
+	background: none;
+}
+
+#n-lf .list-le li .list-box li a:hover {
+	color: #D6211A;
+}
+
+/* 中间导航栏 */
+nav .list-cen {
+	float: left;
+	line-height: 36px;
+	/* position: relative; */
+}
+
+nav .list-cen .cen-li {
+	float: left;
+	width: 76px;
+	height: 36px;
+	position: relative;
+}
+
+nav .list-cen .cen-li .cen-li-a {
+	background: #231f20 url(../img2/navBg.gif) no-repeat right 15px;
+	font-size: 14px;
+	display: block;
+	line-height: 36px;
+	/* width: 62px; */
+	padding: 0 7px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+nav .list-cen .cen-li .dz {
+	height: 20px;
+}
+
+nav .list-cen .cen-li .cen-li-last-img {
+	height: 30px;
+	width: 110px;
+	margin-top: 3px;
+	background: #231f20;
+}
+
+nav .list-cen .list-cen-son {
+	background: #fff;
+	z-index: 99;
+	position: absolute;
+	top: 36px;
+	left: -76px;
+	border: 1px #eee solid;
+	height: 345px;
+	width: 635px;
+	box-shadow: 0 0 3px #ddd;
+	display: none;
+}
+
+nav .list-cen .list-cen-son .cen-son-oa {
+	float: left;
+	display: block;
+	margin-top: 20px;
+	padding: 0 10px 0 20px;
+	border-right: 1px solid #eee;
+}
+
+nav .list-cen .list-cen-son ul {
+	float: left;
+	padding: 20px 15px 20px 10px;
+	width: 395px;
+}
+
+nav .list-cen .list-cen-son ul li {
+	margin-bottom: 13px;
+	line-height: 18px;
+}
+
+nav .list-cen .list-cen-son ul li h4 {
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 20px;
+	padding-bottom: 4px;
+	border-bottom: 1px dashed #ddd;
+	margin-bottom: 7px;
+	color: #222;
+}
+
+nav .list-cen .list-cen-son ul li p {
+	color: #ccc;
+	line-height: 18px;
+}
+
+nav .list-cen .list-cen-son ul li a {
+	margin-right: 15px;
+	line-height: 18px;
+	color: #333;
+}
+
+nav .list-cen .list-cen-son ul li .cen-sun-la {
+	color: red;
+}
+
+/* 划过 */
+nav .list-cen .cen-li:hover .list-cen-son {
+	display: block;
+}
+
+/* 搜索框 */
+#n-ri {
+	width: 210px;
+	height: 31px;
+	float: right;
+	position: relative;
+}
+
+#n-ri input {
+	outline: none;
+	padding: 0 10px;
+	height: 26px;
+	border: 0;
+	width: 180px;
+	border-radius: 5px;
+	margin-top: 5px;
+	margin-left: 7px;
+}
+
+#n-ri .ss {
+	position: absolute;
+	display: block;
+	height: 23px;
+	width: 30px;
+	background: #fff url(../img2/index-icon.png) -42px -164px no-repeat;
+	border: none;
+	cursor: pointer;
+	right: 5px;
+	top: 7px;
+}
+
+.hot-word {
+	z-index: 100;
+
+	background: #fff;
+	position: absolute;
+	top: 36px;
+	right: 0;
+	height: auto;
+	width: 198px;
+	border: 1px #e8e8e8 solid;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	display: none;
+}
+
+.hot-word ul {
+	padding: 5px 0;
+}
+
+.hot-word ul a {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	width: 178px;
+	color: #000;
+	font-size: 14px;
+	padding: 0 10px;
+}
+
+/* 划过 */
+.hot-word ul li:hover {
+	background: #f3f3f3;
+}
+
+.hot-word ul li:hover a {
+	color: #d00;
+}
+
+/*侧边导航栏*/
+.ri-list {
+	width: 315px;
+	height: 100%;
+	background: #000;
+	position: fixed;
+	z-index: 300;
+	right: -280px;
+	top: 52px;
+}
+
+/*侧边导航栏   左侧*/
+.ri-list .ri-list-lf {
+	width: 35px;
+	position: absolute;
+	left: 0;
+	top: 30%;
+}
+
+.ri-list .ri-list-ri {
+	width: 280px;
+	height: 100%;
+	position: absolute;
+	left: 35px;
+}
+
+.ri-list-lf-a {
+	height: 40px;
+	width: 35px;
+	position: relative;
+	left: 0;
+	/* background: pink; */
+	margin: 4px 0;
+	cursor: pointer;
+}
+
+.ri-list-lf-a1 {
+	height: 35px;
+	background: url(../img2/index-icon.png) 4px -220px no-repeat;
+}
+
+.ri-list-lf-car {
+	height: 95px;
+	border-top: 1px solid #444;
+	border-bottom: 1px solid #444;
+}
+
+.ri-list-lf-a2 {
+	height: 35px;
+	background: url(../img2/index-icon.png) 4px -250px no-repeat;
+}
+
+.ri-list-lf-b2 {
+	color: #FFF;
+	width: 14px;
+	margin: 5PX auto;
+}
+
+.ri-list-lf-a3 {
+	height: 35px;
+	background: url(../img2/index-icon.png) 3px -119px no-repeat;
+}
+
+.ri-list-lf-a4 {
+	height: 35px;
+	background: url(../img2/index-icon.png) 3px -289px no-repeat;
+}
+
+.ri-list-lf-a5 {
+	height: 35px;
+	background: url(../img2/index-icon.png) 3px -16px no-repeat;
+}
+
+.ri-list-lf-a6 {
+	height: 35px;
+	background: url(../img2/index-icon.png) 2px -323px no-repeat;
+}
+
+.ri-list-lf-a7 {
+	height: 35px;
+	background: url(../img2/index-icon.png) 4px -153px no-repeat;
+}
+
+.ri-list-lf-a8 {
+	margin-top: 60px;
+	height: 35px;
+	background: url(../img2/index-icon.png) -38px -194px no-repeat;
+	/* display: none; */
+}
+
+/* 划过 */
+.ri-list-lf-a:hover {
+	background: #D6211A;
+}
+
+.ri-list-lf-top:hover {
+	background: #000;
+}
+
+/*侧边导航栏   右侧*/
+/* 购物车 */
+.ri-list-ri-car {
+	width: 100%;
+	height: 100%;
+	background: #e6e6e6;
+	/* display: none; */
+}
+
+.ri-list-ri-car h3 {
+	height: 35px;
+	padding: 0 3px;
+	line-height: 35px;
+	color: grey;
+	font-weight: normal;
+}
+
+.ri-list-ri-car h3 input {
+	margin: 12px 8px 0 2px;
+	display: block;
+	float: left;
+}
+
+.ri-list-ri-car h3 span {
+	text-align: center;
+	margin-left: 10px;
+	font-size: 14px;
+	display: block;
+	float: left;
+}
+
+.ri-list-ri-car h3 a {
+	display: block;
+	float: right;
+	color: grey;
+	margin-right: 4px;
+}
+
+.ri-list-ri-car-bot {
+	text-align: center;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.ri-list-ri-car-bot a {
+	display: block;
+	margin-top: 10px;
+	color: #d00;
+	text-decoration: underline;
+}

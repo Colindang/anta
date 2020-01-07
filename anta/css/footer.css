@@ -1,0 +1,186 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+dl,
+dd,
+hr,
+ul,
+ol,
+td,
+input,
+option,
+textarea {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: normal 12px "微软雅黑", Arial, sans-serif;
+	font-size: 12px;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+}
+
+/* 底部 */
+.footer {
+	height: 371px;
+	width: 100%;
+	border-top: 3px solid #e2e2e2;
+	margin-top: 50px;
+}
+
+.footer-top {
+	width: 1190px;
+	height: 250px;
+	margin: 30px auto;
+}
+
+.footer-top .footer-top-box {
+	padding: 0 10px;
+	border-right: 1px solid #dbdbdb;
+	float: left;
+}
+
+.footer-top .footer-top-box ul {
+	float: left;
+	margin: 0 75px;
+}
+
+.footer-top .footer-top-box .top-box-first {
+	margin-left: 0;
+}
+
+.footer-top .footer-top-box ul li {
+	display: block;
+}
+
+.footer-top .footer-top-box ul li a {
+	line-height: 30px;
+	color: #000;
+}
+
+.footer-top h4 {
+	font-weight: bolder;
+	font-size: 16px;
+	line-height: 32px;
+	color: #000;
+}
+
+.footer-top-ri {
+	float: left;
+	margin-left: 100px;
+}
+
+.footer-top-ri .top-ri-span {
+	display: block;
+	width: 250px;
+	height: 40px;
+	margin: 5px 0 15px;
+	background: url(../img2/service-icon.png) -10px -15px no-repeat;
+}
+
+.top-ri-a {
+	margin-bottom: 10px;
+	display: block;
+	height: 25px;
+	width: 135px;
+	border: 1px #bdbdbd solid;
+	border-radius: 5px;
+}
+
+.top-ri-a span {
+	height: 25px;
+	line-height: 25px;
+	margin-left: 15px;
+	color: #000;
+	font-size: 14px;
+}
+
+.top-ri-img {
+	width: 90px;
+	height: 90px;
+	display: block;
+	background: url(../img2/qr-code.jpg) no-repeat;
+}
+
+/* 底部 */
+.footer-bot {
+	width: 100%;
+	height: 60px;
+	background: #000000;
+}
+
+.footer-bot .footer-bot-box {
+	width: 1190px;
+	margin: 0 auto;
+}
+
+.footer-bot .footer-bot-box span {
+	display: block;
+	float: left;
+	color: #fff;
+	line-height: 60px;
+}
+
+.footer-bot .footer-bot-box div {
+	float: right;
+	color: #fff;
+}
+
+.footer-bot .footer-bot-box .span-left {
+	margin-right: 15px;
+}
+
+.footer-bot .footer-bot-box .span-name {
+	margin-right: 30px;
+}
+
+.footer-bot .footer-bot-box .a-img {
+	display: block;
+	float: left;
+	height: 33px;
+	width: 34px;
+	margin-top: 10px;
+	margin-right: 30px;
+}
+
+.footer-bot .footer-bot-box div a {
+	float: left;
+	color: #fff;
+	display: block;
+	margin-left: 10px;
+	line-height: 60px;
+}
+
+/* 划过 */
+.footer-top .footer-top-box ul li a:hover {
+	color: #D6211A;
+}
+
+.footer-bot .footer-bot-box div a:hover {
+	color: red;
+}
+.top-ri-a:hover{
+	background: red;
+}
+.top-ri-a:hover span{
+	color: #fff;
+}

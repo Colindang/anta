@@ -1,0 +1,155 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+dl,
+dd,
+hr,
+ul,
+ol,
+td,
+input,
+option,
+textarea {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: normal 12px "微软雅黑", Arial, sans-serif;
+	font-size: 12px;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+}
+
+
+/* banner图 */
+banner{
+	width: 100%;
+	display: block;
+}
+.banner {
+	width: 100%;
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+}
+.banner a{
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -960px
+}
+/* 优惠券 */
+.yh {
+	width: 100%;
+	height: 335px;
+	position: relative;
+	overflow: hidden;
+}
+
+.yh table {
+	width: 100%;
+	border: none;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -960px;
+}
+.yh table tr td{
+	border: none;
+}
+.yh a {
+	float: left;
+}
+
+.yh img {
+	display: block;
+}
+
+/* 详情内容 */
+.content {
+	width: 100%;
+	height: 10102px;
+	overflow: hidden;
+	position: relative;
+}
+
+.pin {
+	display: block;
+	/* margin-left: -200px; */
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -960px;
+}
+
+.content-top {
+	width: 970px;
+	height: 3110px;
+	/* border: 1px solid red; */
+	position: absolute;
+	top: 275px;
+	left: 280px;
+}
+
+.content-top-a {
+	display: block;
+	width: 315px;
+	height: 465px;
+	float: left;
+	/* border: 1px solid yellow; */
+	margin-right: 5px;
+	margin-bottom: 23px;
+	border-radius: 20px;
+}
+
+.content-top-ab {
+	display: block;
+	width: 800px;
+	height: 100px;
+	float: left;
+	/* border: 1px solid gold; */
+	margin-left: 95px;
+	margin-top: 40px;
+}
+
+.content-top-ab1 {
+	margin-left: 80px;
+	margin-top: 20px;
+}
+
+.content-top-ab2 {
+	margin-left: 80px;
+	margin-top: 20px;
+}
+
+.content-top-b {
+	position: absolute;
+	top: 3662px;
+	left: 280px;
+}
+
+.content-top-c {
+	position: absolute;
+	top: 6990px;
+	left: 280px;
+}

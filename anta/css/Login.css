@@ -1,0 +1,186 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+hr,
+ul,
+ol,
+td,
+input,
+option,
+textarea {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 12px;
+	font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", "微軟正黑體", "儷黑 Pro", sans-serif;
+	background: #f5f5f5;
+	color: #757575;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+}
+
+.content {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.content-cen {
+	background-color: #fff;
+	width: 854px;
+	margin: 0 auto 20px;
+	/* position: relative; */
+	height: 620px;
+	overflow: hidden;
+}
+
+.content-cen-lg {
+	width: 358px;
+	height: 500px;
+	/* background: pink; */
+	margin: 50px auto;
+	text-align: center;
+}
+
+.content-cen-lg img {
+	margin-bottom: 20px;
+}
+
+.content-cen-lg input {
+	display: block;
+	width: 326px;
+	height: 14px;
+	line-height: 22px;
+	padding: 13px 16px 13px 14px;
+	font-size: 12px;
+	outline: none;
+	margin-bottom: 14px;
+	border: 1px solid #e0e0e0;
+}
+
+/* 登录 */
+.cen-lg-btn {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	background: #D6211A;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	margin-bottom: 56px;
+	margin-top: 14px;
+}
+
+/* 其他登录方式 */
+.cen-lg-txt {
+	width: 100%;
+	border-top: 1px solid #e0e0e0;
+	padding-top: 10px;
+}
+
+.cen-lg-txt span {
+	display: block;
+	width: 85px;
+	margin: -20px auto 0;
+	font-size: 14px;
+	color: #b0b0b0;
+	background: #fff;
+	/* margin-top: -20px; */
+}
+
+.cen-lg-txt a {
+	width: 29px;
+	height: 29px;
+	margin: 17px 12px 0;
+	display: inline-block;
+	border-radius: 50%;
+	background: gray;
+	/* border: 1px solid red; */
+	position: relative;
+	overflow: hidden;
+}
+
+.weChat img {
+	position: absolute;
+	left: -81px;
+	top: 6px;
+}
+
+.zfb img {
+	position: absolute;
+	left: -55px;
+	top: 6px;
+}
+
+.qq img {
+	width: 150px;
+	height: 25px;
+	position: absolute;
+	left: -25px;
+	top: 1px;
+}
+
+.xlwb img {
+	width: 130px;
+	height: 20px;
+	position: absolute;
+	left: -41px;
+	top: 4px;
+}
+
+.weChat:hover {
+	background-color: #00d20d;
+}
+
+.zfb:hover {
+	background-color: #0ae;
+}
+
+.qq:hover {
+	background-color: #0288d1;
+}
+
+.xlwb:hover {
+	background-color: #d32f2f;
+}
+
+/* 注册 */
+
+.cen-lg-reg {
+	width: 100%;
+	padding: 30px 0px 0px ;
+}
+
+.cen-lg-reg a {
+	padding: 0 9px;
+	font-size: 14px;
+	color: #757575;
+}
+
+/* 划过 */
+.cen-lg-reg a:hover{
+	color: #ff6700;
+}

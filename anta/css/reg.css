@@ -1,0 +1,252 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+hr,
+ul,
+ol,
+td,
+input,
+option,
+textarea {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", "微軟正黑體", "儷黑 Pro", sans-serif;
+	background: #f9f9f9;
+	color: #666;
+	font-size: 14px;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+}
+
+.content {
+	width: 100%;
+}
+
+.content-cen {
+	background-color: #fff;
+	width: 854px;
+	margin: 0 auto 20px;
+	height: 620px;
+	overflow: hidden;
+}
+
+.content-cen-lg {
+	width: 360px;
+	height: 500px;
+	margin: 65px auto;
+	text-align: center;
+}
+
+.content-cen-lg img {
+	display: block;
+	margin-bottom: 30px;
+	float: left;
+	overflow: hidden;
+}
+
+.select {
+	width: 100%;
+	position: relative;
+}
+
+.select a {
+	display: inline-block;
+	width: 50%;
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+	float: left;
+	cursor: pointer;
+}
+
+.phone {
+	position: relative;
+	background: #D6211A;
+	color: #FFFFFF;
+}
+
+.email {
+	position: relative;
+	background: #fbfbfb;
+	color: #999;
+	overflow: hidden;
+}
+
+.jiaojiao {
+	border-top: 7px solid #d71921;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -4px;
+}
+
+/* 手机注册 */
+.phone-reg {
+	width: 100%;
+	display: block;
+}
+
+.email-reg {
+	width: 100%;
+	display: none;
+}
+
+.content-cen-lg h4 {
+	margin: 20px 0px 20px;
+	font-size: 14px;
+	float: left;
+	color: #666;
+}
+
+.content-cen-lg .reg-a {
+	display: block;
+	/* line-height: 22px; */
+	padding: 13px 16px 13px 14px;
+	font-size: 14px;
+	outline: none;
+	margin-bottom: 14px;
+	border: 1px solid #e0e0e0;
+}
+
+.phone-reg-o1 {
+	width: 326px;
+}
+
+.phone-reg-o2 {
+	width: 180px;
+}
+
+.phone-reg-cb {
+	display: block;
+	float: left;
+	color: #000000;
+	font-size: 13px;
+}
+
+.p-a {
+	color: #666;
+}
+
+/* 提示信息 */
+.phone-hint{
+	display: block;
+	color: red;
+	float: left;
+	font-size: 14px;
+	margin-top: 15px;
+	margin-bottom: -10px;
+}
+
+.email-hint{
+	display: block;
+	color: red;
+	float: left;
+	font-size: 14px;
+	margin-top: 15px;
+	margin-bottom: -10px;
+}
+	
+/* 单独手机注册页面 */
+
+.content-to {
+	width: 100%;
+	display: none;
+}
+	
+.content-to-cen {
+	background-color: #fff;
+	width: 854px;
+	margin: 0 auto 20px;
+	height: 620px;
+	overflow: hidden;
+}
+	
+.content-to-cen-lg {
+	width: 360px;
+	height: 500px;
+	margin: 65px auto;
+	text-align: center;
+}
+.content-to-cen-lg h2{
+	font-weight: normal;
+	font-size: 19px;
+	margin-bottom: 15px;
+}	
+.content-to-cen-lg h4 {
+	margin: 20px 0px 20px;
+	font-size: 14px;
+	float: left;
+	color: #000;
+}	
+	
+.content-to-cen-lg .reg-a {
+	display: block;
+	padding: 13px 16px 13px 14px;
+	font-size: 14px;
+	outline: none;
+	margin-bottom: 14px;
+	border: 1px solid #e0e0e0;
+	float: left;
+}
+
+.phone-reg-o1 {
+	width: 326px;
+}
+
+.phone-reg-o2 {
+	width: 200px;
+}	
+
+.phone-reg-o3 {
+	width: 120px;
+	text-align: center;
+	margin-top: 0;
+	background-color: #d71921;
+	color: #fff;
+	margin-left: 5px;
+}
+	
+
+	
+/* 确认注册 */
+.cen-lg-btn {
+	width: 100%;
+	height: 46px;
+	line-height: 46px;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	background: #D6211A;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	margin-bottom: 56px;
+	margin-top: 60px;
+}
+
+
+

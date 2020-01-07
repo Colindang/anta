@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>账号注册</title>
+	<link rel="shortcut icon" href="img1/logo.ico" />
+	<link rel="stylesheet" type="text/css" href="css/reg.css" />
+	<link rel="stylesheet" type="text/css" href="css/login-footer.css" />
+	<link rel="stylesheet" type="text/css" href="css/login-nav.css" />
+</head>
+
+<body>
+	<!-- 注册页面 -->
+	<div class="content">
+		<div class="content-cen">
+			<div class="content-cen-lg">
+				<img src="img-Login/logo.png">
+				<div class="select">
+					<a class="phone">
+						手机注册
+						<div class="jiaojiao"></div>
+					</a>
+					<a class="email">
+						邮箱注册
+						<div class="jiaojiao"></div>
+					</a>
+				</div>
+
+
+				<div class="phone-reg">
+					<h4>请输入手机号码注册:</h4>
+					<input class="phone-reg-o1 reg-a" id="phone" type="text" placeholder="手机号码" />
+					<input class="phone-reg-o2 reg-a" type="text" placeholder="图片验证码" />
+					<p class="phone-reg-cb">
+						<input type="checkbox" class="phone-tz-put" style="vertical-align: middle; margin-right:5px ;"
+							checked />我已充分阅读、理解并接受<a href="" class="p-a">隐私政策</a>的全部内容
+					</p>
+					<span class="phone-hint"></span>
+					<button class="cen-lg-btn phone-tz" type="button">确认</button>
+				</div>
+				<!-- name="username" name="pwd" -->
+				<div class="email-reg">
+					<form action="jion.php" method="post">
+						<h4>请输入邮箱地址注册:</h4>
+						<input class="phone-reg-o1 reg-a" id="email" type="text" placeholder="邮箱地址" />
+						<input class="phone-reg-o1 reg-a" id="email-pwd" type="password" placeholder="登录密码" />
+						<input class="phone-reg-o2 reg-a" type="text" placeholder="图片验证码" />
+						<p class="phone-reg-cb">
+							<input type="checkbox" style="vertical-align: middle; margin-right:5px ;"
+								checked />我已充分阅读、理解并接受<a href="" class="p-a">隐私政策</a>的全部内容
+						</p>
+						<span class="email-hint"></span>
+						<button class="cen-lg-btn email-btn">确认</button>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--  -->
+	<!-- 手机号注册页面 -->
+	<div class="content-to">
+		<div class="content-to-cen">
+			<div class="content-to-cen-lg">
+				<h2>安踏帐号注册安全验证</h2>
+				<!-- name="username" name="pwd" -->
+				<div class="phone-to-reg">
+					<form action="jion.php" method="post">
+						<h4>为了保护帐号安全，需要验证手机有效性</h4>
+						<input class="phone-reg-o1 reg-a" id="phone-to" type="text" placeholder="手机号码" />
+						<input class="phone-reg-o1 reg-a" id="phone-to-pwd" type="password" placeholder="登录密码" />
+						<input class="phone-reg-o2 reg-a" type="text" placeholder="短信验证码" />
+						<input class="phone-reg-o3 reg-a" type="button" value="重新发送" />
+
+						<span class="phone-hint phone-to-hint"></span>
+						<button class="cen-lg-btn phone-btn">确认</button>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- 侧边导航 -->
+	<div class="nav">
+
+	</div>
+	<!-- 底部 -->
+	<div class="footer">
+
+	</div>
+</body>
+
+</html>
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function () {
+		// 引入底部
+		$('.footer').load('login-footer.html');
+		// 引入导航
+		$('.nav').load('login-nav.html', function () {
+			window.addEventListener('scroll', function () {
+				let t = $('body, html').scrollTop();
+
+				if (t > 20) {
+
+					$(".list-o3").css({
+						"height": 73,
+						"transition": "0.3s"
+					});
+
+				} else {
+					$(".list-o3").css({
+						"height": 0
+					});
+				}
+			});
+
+			$(".list-o3").click(function () {
+				$('body, html').scrollTop(0);
+			});
+		});
+
+		// 点击切换  手机注册
+		$('.phone').click(function () {
+			$('.phone-reg').css({
+				'display': 'block'
+			});
+			$('.phone').css({
+				'background': '#D6211A',
+				'color': '#FFFFFF',
+				'overflow': 'visible'
+			})
+			$('.email-reg').css({
+				'display': 'none'
+			});
+			$('.email').css({
+				'background': '#fbfbfb',
+				'color': '#999',
+				'overflow': 'hidden'
+			})
+		});
+
+		// 点击切换  邮箱注册
+		$('.email').click(function () {
+			$('.phone-reg').css({
+				'display': 'none'
+			});
+			$('.phone').css({
+				'background': '#fbfbfb',
+				'color': '#999',
+				'overflow': 'hidden'
+			})
+			$('.email-reg').css({
+				'display': 'block'
+			});
+			$('.email').css({
+				'background': '#D6211A',
+				'color': '#FFFFFF',
+				'overflow': 'visible'
+			})
+		});
+
+		// 手机注册验证
+		var $flagphone = null;
+		$('#phone').blur(function () {
+			let tel = /^(15|13|18|17|16|19)\d{9}$/;
+			if (tel.test($(this).val())) {
+				$('.phone-hint').html('');
+				$flagphone = true;
+				// 切换页面
+				$('.cen-lg-btn').click(function () {
+					$('.content').css({
+						'display': 'none'
+					});
+					$('.content-to').css({
+						'display': 'block'
+					});
+				});
+
+			} else {
+				$('.phone-hint').html('请正确输入注册手机号码');
+				$flagphone = false;
+			}
+		});
+
+
+		// 邮箱注册验证
+		var $flagemail = null;
+		$('#email').blur(function () {
+			let tel = /^\w+@\w+\.com$/;
+			if (tel.test($(this).val())) {
+				$('.email-hint').html('');
+				$flagemail = true;
+			} else {
+				$('.email-hint').html('请正确输入注册邮箱地址');
+				$flagemail = false;
+			}
+		});
+
+		// 手机号提交跳转
+		$('.phone-tz').click(function () {
+			$('#phone-to').val($('#phone').val());
+		})
+
+		// 邮箱提交注册
+		$('.email-btn').click(function () {
+			// var $name = $('#email').val();
+			// var $pwd = $('#email-pwd').val();
+			// console.log($name);
+			if ($('#email-pwd').val() != '' && $flagemail == true) {
+
+				$.ajax({
+					url: "jion.php",
+					data: {
+						username: $('#email').val(),
+						pwd: $('#email-pwd').val()
+					},
+					type: "post",
+					success: function (str) {
+						if (str == 1) {
+							alert("账号已被注册");
+						} else if (str == 0) {
+							alert("注册成功");
+							window.location.href = "reg.html";
+						}
+					},
+				});
+
+
+
+				$(".email-btn").attr("type", "submit");
+			} else {
+				$(".email-btn").attr("type", "button");
+				$('.email-hint').html('内容不能为空');
+			}
+
+		});
+
+		// 手机号提交注册
+		$('.phone-btn').click(function () {
+			if ($('#phone-to-pwd').val() != '') {
+				$.ajax({
+					url: "jion.php",
+					data: {
+						username: $('#phone-to').val(),
+						pwd: $('#phone-to-pwd').val()
+					},
+					type: "post",
+					success: function (str) {
+						if (str == 1) {
+							alert("账号已被注册");
+						} else if (str == 0) {
+							alert("注册成功");
+							window.location.href = "reg.html";
+						}
+					},
+				});
+				$(".phone-btn").attr("type", "submit");
+			} else {
+				$('.phone-to-hint').html('密码不能为空');
+				$(".phone-btn").attr("type", "button");
+			}
+		})
+
+
+	});
+</script>

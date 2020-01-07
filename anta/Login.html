@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>安踏官方商城-登录</title>
+	<link rel="shortcut icon" href="img1/logo.ico" />
+	<link rel="stylesheet" type="text/css" href="css/Login.css" />
+	<link rel="stylesheet" type="text/css" href="css/login-footer.css" />
+	<link rel="stylesheet" type="text/css" href="css/login-nav.css" />
+</head>
+
+<body>
+	<!-- 登录页面 -->
+	<div class="content">
+		<div class="content-cen">
+			<form action="look.php" method="post">
+				<div class="content-cen-lg">
+					<img src="img-Login/logo.png">
+					<input type="text" id="zhanghao" placeholder="邮箱/手机号码/安踏帐号" />
+					<input type="password" id="pwd" placeholder="密码" />
+					<span></span>
+					<button class="cen-lg-btn">立即登录</button>
+
+					<div class="cen-lg-txt">
+						<span>其他方式登录</span>
+						<a class="weChat" href="">
+							<img src="img-Login/icons_type.png">
+						</a>
+						<a class="zfb" href="">
+							<img src="img-Login/icons_type.png">
+						</a>
+						<a class="qq" href="">
+							<img src="img-Login/icons_type.png">
+						</a>
+						<a class="xlwb" href="">
+							<img src="img-Login/icons_type.png">
+						</a>
+					</div>
+					<div class="cen-lg-reg">
+						<a href="reg.html">账号注册</a> | <a href="reg.html">忘记密码</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- 侧边导航 -->
+	<div class="nav">
+
+	</div>
+	<!-- 底部 -->
+	<div class="footer">
+
+	</div>
+</body>
+
+</html>
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function () {
+		$('.footer').load('login-footer.html');
+		$('.nav').load('login-nav.html', function () {
+			window.addEventListener('scroll', function () {
+				let t = $('body, html').scrollTop();
+
+				if (t > 20) {
+
+					$(".list-o3").css({
+						"height": 73,
+						"transition": "0.3s"
+					});
+
+				} else {
+					$(".list-o3").css({
+						"height": 0
+					});
+				}
+			});
+
+			$(".list-o3").click(function () {
+				$('body, html').scrollTop(0);
+			});
+
+		});
+
+		$('.cen-lg-btn').click(function () {
+			if ($('#zhanghao').val() != '' && $('#pwd').val() != '') {
+				$(".cen-lg-btn").attr("type", "submit");
+				$.ajax({
+					url: "look.php",
+					data: {
+						username: $('#zhanghao').val(),
+						pwd: $('#pwd').val()
+					},
+					type: "post",
+					success: function (str) {
+						if (str == 1) {
+							alert("登录成功");
+							window.location.href = "market.html";
+						} else if (str == 0) {
+							alert("账号或密码不正确");
+							window.location.href = "Login.html";
+						}
+					},
+				});
+
+			} else {
+				$(".cen-lg-btn").attr("type", "button");
+				alert('不能为空');
+			}
+		})
+
+
+	});
+</script>
